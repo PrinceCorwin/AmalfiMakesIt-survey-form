@@ -1,4 +1,4 @@
 # WebForm Mockups
-Examples of traditional, neomorphism, glassmorphism, and professional user input webforms
+Examples of card, neomorphism, glassmorphism, and professional user input webforms
 
 
