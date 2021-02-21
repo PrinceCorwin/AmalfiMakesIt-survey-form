@@ -1,10 +1,38 @@
-body {
-  background-color: #d5f5e3;
-  margin: 0;
-  padding-top: 2em;
+@font-face {
+  font-family: "existence";
+  src: url("Existence-Light.otf") format("OpenType");
+}
+/* roots and customs */
+:root {
+  --clr-cardbg: #d5f5e3;
+  --clr-card: #003304;
+  --clr-white: #dadbdd;
+  --clr-glassbg: ;
+  --clr-glass: ;
+  --clr-neobg: ;
+  --ff-neo: ;
+  --ff-probg: ;
+  --ff-pro: ;
 }
 
-.container {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+.container1 {
+  position: relative;
+  font-family: "existence", sans-serif;
+  background: linear-gradient(to left top, var(--clr-white), var(--clr-cardbg));
+  background-size: cover;
+  /* width: 50%; */
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,24 +40,41 @@ body {
   font-size: 1.5em;
 }
 
-#header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#title {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
-
+.header {
+  text-align: center;
+}
 #survey-form {
-  background-color: #003304;
+  position: relative;
+  color: var(--clr-white);
+
+  background: linear-gradient(to left top, var(--clr-cardbg), var(--clr-card));
+  background-size: cover;
   border-radius: 7px;
   color: white;
   padding: 2em 2em 2em 2em;
-  width: 50%;
-  box-shadow: 5px 20px 20px 5px #0c5e64;
+  width: 600px;
+  box-shadow: 5px 5px 20px 5px #0c5e64;
+}
+.name-email,
+.age-delivery {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 20px;
 }
 .name-label,
 .email-label,
-.number-label {
+.number-label,
+.delivery-label {
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -37,14 +82,18 @@ body {
 #email,
 #number,
 #dropdown {
-  width: 100%;
+  /* width: 100%; */
   height: 2.5em;
   margin: 0.35em 0 1.3em 0;
   border-radius: 6px;
+  padding-left: 1rem;
 }
 textarea {
   width: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
   height: 7em;
+  padding: 1rem;
 }
 #submit {
   cursor: pointer;
@@ -57,6 +106,7 @@ textarea {
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 #description {
   font-size: 1.2em;
@@ -67,7 +117,9 @@ textarea {
 .label-title {
   margin-bottom: 0.25em;
 }
-#title {
-  margin-bottom: 0;
-  padding-bottom: 0.5em;
+
+#ami {
+  position: absolute;
+  top: 40%;
+  right: 40px;
 }
